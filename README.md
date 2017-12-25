@@ -10,4 +10,4 @@ This is a crawl project just for study
 
 TODO
 
-[] fix HTTP Error 503: Service Temporarily Unavailable, 爬的过程太过密集，服务器拒绝
+ - [ ] fix HTTP Error 503: Service Temporarily Unavailable, 爬的过程太过密集，服务器拒绝
