@@ -1,7 +1,7 @@
 import threading
 from queue import Queue
 from spider import Spider
-from general import *
+from general import file_to_set
 
 PROJECT_NAME = "softs"
 # HOMEPAGE = 'https://doub.bid'

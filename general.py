@@ -16,24 +16,28 @@ def create_data_files(project_name,base_url):
 
 
 def write_file(path,data):
-	with open(path,'w') as f:
-		f.write(data)
+	file = open(path,'w')
+	file.write(data)
+	file.close()
 
 def append_to_file(path,data):
-	with open(path,'a') as file:
-		file.write(data + '\n')
+	file = open(path,'a')
+	file.write(data + '\n')
+	file = close()
 
 def delete_file_contents(path):
 	open(path,'w').close()
 
 def file_to_set(file_name):
 	result = set()
-	with open(file_name,'rt') as f:
-		for line in f:
-			result.add(line.replace('\n',''))
+	file = open(file_name,'rt')
+	for line in file:
+		result.add(line.replace('\n',''))
+	file.close()
 	return result
 
 def set_to_file(links,file_name):
-	with open(file_name,'w') as f:
-		for l in sorted(links):
-			f.write(l+'\n')
+	file = open(file_name,'w')
+	for l in sorted(links):
+		file.write(l+'\n')
+	file.close()

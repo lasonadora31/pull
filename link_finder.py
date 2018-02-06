@@ -9,7 +9,7 @@ class LinkFinder():
         self.base_url = base_url
         self.page_url = page_url
 
-    def __get_content(self):
+    def _get_content(self):
         headers = [
         "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36",  
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36",  
@@ -26,7 +26,7 @@ class LinkFinder():
         return urlopen(req).read()
 
     def links(self):
-        soup = BeautifulSoup(self.__get_content(), "html.parser")
+        soup = BeautifulSoup(self._get_content(), "html.parser")
         return [os.path.join(self.base_url, link.get('href')) \
                 for link in soup.find_all('a', class_ = 'clearfix') \
                 if 'https://' not in link.get('href')]

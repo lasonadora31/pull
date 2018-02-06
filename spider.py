@@ -1,4 +1,4 @@
-from general import *
+from general import create_project_dir, create_data_files, file_to_set, set_to_file
 from link_finder import LinkFinder
 
 class Spider:
